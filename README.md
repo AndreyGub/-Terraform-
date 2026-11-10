@@ -17,11 +17,28 @@
 ### Ответ:
 1. <img width="813" height="171" alt="image" src="https://github.com/user-attachments/assets/7e9cbd7f-8076-4ae6-9bf6-42859a03112d" />
 
-2.<img width="591" height="65" alt="image" src="https://github.com/user-attachments/assets/2fecc9d4-19b1-45e5-a552-38c0ee98a298" />
+ <img width="591" height="65" alt="image" src="https://github.com/user-attachments/assets/2fecc9d4-19b1-45e5-a552-38c0ee98a298" />
  
+2. <img width="307" height="200" alt="image" src="https://github.com/user-attachments/assets/ffbb97a2-a73d-45e9-b9cd-398f4f902674" />
+
+Согласно файлу .gitignore, для личных и секретных данных  напримерр логинов, паролей, ключей, токенов  предназначен файл personal.auto.tfvars.
+
+3.  <img width="857" height="506" alt="image" src="https://github.com/user-attachments/assets/5940a126-fcd2-4533-a610-29788847b5e2" />
+<img width="690" height="528" alt="image" src="https://github.com/user-attachments/assets/ab6fa142-da4a-4b51-adeb-8adb220b453a" />
+
+ сгенерированное секретное значение хранится в ключе result : "hLvmTedz4yyN2Yo8" 
+
+ 4. <img width="795" height="265" alt="image" src="https://github.com/user-attachments/assets/9f3dcfcf-fdbe-4494-aeeb-a2d6b78b51cd" />
+<img width="757" height="142" alt="image" src="https://github.com/user-attachments/assets/4d7375fe-aab7-4968-9f14-2966e08a4803" />
 
 
-------
+Ошибка 1: В docker_image не было указано имя ресурса. Исправил на docker_image "nginx" 
+
+Ошибка 2: Имя ресурса docker_container "1nginx" начиналось с цифры. должно начинаться с буквы или подчеркивания. Исправил на docker_container "nginx" 
+
+Ошибка 3: В имени переменной для пароля были опечатки (random_string_FAKE.resulT). Исправил на random_password.random_string.result.
+
+------ 
 
 ## Дополнительное задание (со звёздочкой*)
 
