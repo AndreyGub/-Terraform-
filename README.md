@@ -61,7 +61,8 @@ resource "docker_container" "nginx" {
 <img width="978" height="625" alt="image" src="https://github.com/user-attachments/assets/2c15552a-dfb2-49ed-a091-a573ecc4e2ea" />
 
 
-6. <img width="632" height="302" alt="image" src="https://github.com/user-attachments/assets/a65d5c55-34a2-4829-ba07-70625ab62c2f" />
+6. <img width="614" height="278" alt="image" src="https://github.com/user-attachments/assets/c607793b-17e8-4b59-85a5-1c426991ecb2" />
+
 
 <img width="879" height="345" alt="image" src="https://github.com/user-attachments/assets/5ed9905f-db3f-41ce-a486-fe25fde3a9b1" />
 
