@@ -28,6 +28,7 @@
 
  сгенерированное секретное значение хранится в ключе result : "hLvmTedz4yyN2Yo8" 
 
+
  4. <img width="795" height="265" alt="image" src="https://github.com/user-attachments/assets/9f3dcfcf-fdbe-4494-aeeb-a2d6b78b51cd" />
 <img width="757" height="142" alt="image" src="https://github.com/user-attachments/assets/4d7375fe-aab7-4968-9f14-2966e08a4803" />
 
@@ -37,6 +38,28 @@
 Ошибка 2: Имя ресурса docker_container "1nginx" начиналось с цифры. должно начинаться с буквы или подчеркивания. Исправил на docker_container "nginx" 
 
 Ошибка 3: В имени переменной для пароля были опечатки (random_string_FAKE.resulT). Исправил на random_password.random_string.result.
+
+
+5. <img width="867" height="126" alt="image" src="https://github.com/user-attachments/assets/fcfee1cc-d8bb-488d-a470-85cae99d7733" />
+
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.image_id
+  name  = "example_${random_password.random_string.result}"
+
+  ports {
+    internal = 80
+    external = 9090
+  }
+}
+
+
+<img width="978" height="625" alt="image" src="https://github.com/user-attachments/assets/2c15552a-dfb2-49ed-a091-a573ecc4e2ea" />
+
 
 ------ 
 
