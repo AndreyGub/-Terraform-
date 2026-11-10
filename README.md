@@ -65,7 +65,22 @@ resource "docker_container" "nginx" {
 
 <img width="879" height="345" alt="image" src="https://github.com/user-attachments/assets/5ed9905f-db3f-41ce-a486-fe25fde3a9b1" />
 
+Флаг -auto-approve отключает интерактивное подтверждение плана. Terraform немедленно применяет все запланированные изменения, не давая пользователю возможности просмотреть план и убедиться в его безопасности. Это может привести к случайному уничтожению или изменению критичных ресурсов (баз данных, сетей, дисков), если конфигурация содержит ошибку или неожиданное изменение.
 
+для чего нужен -auto-approve:
+
+Ключ предназначен для автоматизированных сценариев, где человек физически не может подтвердить план: в CI/CD-пайплайнах, скриптах развёртывания, тестовых средах и т.п. В таких случаях план обычно предварительно проверяется на этапе terraform plan, а -auto-approve используется только для заранее утверждённых конфигураций.
+
+
+7. <img width="889" height="422" alt="image" src="https://github.com/user-attachments/assets/f684a8fd-a413-4fbf-b6e6-c40954821fe2" />
+<img width="573" height="47" alt="image" src="https://github.com/user-attachments/assets/6b07ca20-59bf-457a-a3cd-32cd7a550f54" />
+
+<img width="705" height="158" alt="image" src="https://github.com/user-attachments/assets/8c0423e8-b03d-403a-a4d0-c1db4973a09e" />
+
+
+8.<img width="925" height="52" alt="image" src="https://github.com/user-attachments/assets/5b433c04-ee52-4b67-8879-3810ca202cb0" />
+
+при terraform destroy - Terraform не удаляет образ nginx:latest из локального хранилища Docker, потому что это  задано  keep_locally = true. Образ остаётся на хосте и может быть использован повторно
 
 ------ 
 
@@ -90,6 +105,7 @@ resource "docker_container" "nginx" {
 ```
 
 6. Зайдите на вашу ВМ , подключитесь к контейнеру и проверьте наличие секретных env-переменных с помощью команды ```env```. Запишите ваш финальный код в репозиторий.
+   
 
 ### Задание 3*
 1. Установите [opentofu](https://opentofu.org/)(fork terraform с лицензией Mozilla Public License, version 2.0) любой версии
